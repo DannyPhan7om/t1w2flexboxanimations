@@ -1,0 +1,118 @@
+/* CSS Config
+Any part of the CSS whether desktop or mobile could use this stuff */
+* {
+    margin: 0;
+
+    --blue: #1AA4DB;
+    --turquoise: #42DCD8;
+    --orange: #DB7414;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    color: white;
+}
+
+/* Mobile First Styling */
+
+body {
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    text-align: center;
+    align-items: center;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100dvh;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    background-color: var(--turquoise);
+}
+
+.column {
+    width: 100%;
+    background-color: var(--orange);
+
+    height: 50dvw;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+header {
+    min-height: 7dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer {
+    min-height: 3dhv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    /* margin-top: auto; */
+}
+
+/* Main Element with a Class of Row */
+main.row {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+a:hover {
+    background-color: var(--black);
+    animation: spin 1s infinite linear;
+}
+
+h1:hover {
+    animation: swing 1s infinite linear;
+}
+
+@keyframes spin {
+0% {
+    transform: rotate(0deg);
+    color: var(--turquoise);
+}
+
+50% {
+    color: var(--blue);
+}
+
+100% {
+    transform: rotate(360deg) ;
+    columns: var(--turquoise);
+}
+}
+
+
+/* Desktop Styling */
+@media screen and (min-width: 500px) {
+    body {
+        background-color: var(--turquoise);
+    }
+
+    main.row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.column {
+    width: 30dvh;
+    height: 50dvh;
+}
+
+}
+    
